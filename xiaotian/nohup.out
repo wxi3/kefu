@@ -1,0 +1,152 @@
+Workerman[start.php] start in DEBUG mode
+--------------------------------------------- WORKERMAN ----------------------------------------------
+Workerman version:4.0.4          PHP version:7.2.33
+---------------------------------------------- WORKERS -----------------------------------------------
+proto   user            worker              listen                      processes    status           
+tcp     root            wsBusinessWorker    none                        8             [OK]            
+tcp     root            wsAppGateway        websocket://0.0.0.0:2020    8             [OK]            
+tcp     root            Register            text://0.0.0.0:1238         1             [OK]            
+------------------------------------------------------------------------------------------------------
+Press Ctrl+C to stop. Start success.
+Workerman[start.php] start in DEBUG mode
+Workerman[start.php] already running
+Workerman[start.php] start in DEBUG mode
+--------------------------------------------- WORKERMAN ----------------------------------------------
+Workerman version:4.0.4          PHP version:7.2.33
+---------------------------------------------- WORKERS -----------------------------------------------
+proto   user            worker              listen                      processes    status           
+tcp     root            wsBusinessWorker    none                        8             [OK]            
+tcp     root            wsAppGateway        websocket://0.0.0.0:2020    8             [OK]            
+tcp     root            Register            text://0.0.0.0:1238         1             [OK]            
+------------------------------------------------------------------------------------------------------
+Press Ctrl+C to stop. Start success.
+Exception: client_id o1iiy0xdxuo is invalid in /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/gateway-worker/src/Lib/Context.php:131
+Stack trace:
+#0 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/gateway-worker/src/Lib/Gateway.php(1111): GatewayWorker\Lib\Context::clientIdToAddress('o1iiy0xdxuo')
+#1 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/gateway-worker/src/Lib/Gateway.php(882): GatewayWorker\Lib\Gateway::sendCmdAndMessageToClient('o1iiy0xdxuo', 12, '', '7f0000010b5b000...')
+#2 /www/wwwroot/kefudia15.com/xiaotian/application/service/SocketEvents.php(622): GatewayWorker\Lib\Gateway::bindUid('o1iiy0xdxuo', '7f0000010b5b000...')
+#3 /www/wwwroot/kefudia15.com/xiaotian/application/service/Events.php(70): app\service\SocketEvents::chatMessage('7f0000010b5b000...', Array, Object(Workerman\MySQL\Connection))
+#4 [internal function]: app\service\Events::onMessage('7f0000010b5b000...', '{"cmd":"chatMes...')
+#5 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/gateway-worker/src/BusinessWorker.php(404): call_user_func('app\\service\\Eve...', '7f0000010b5b000...', '{"cmd":"chatMes...')
+#6 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Connection/TcpConnection.php(660): GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#7 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Events/Select.php(292): Workerman\Connection\TcpConnection->baseRead(Resource id #68)
+#8 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Worker.php(2408): Workerman\Events\Select->loop()
+#9 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#10 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Worker.php(1541): GatewayWorker\BusinessWorker->run()
+#11 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Worker.php(1371): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#12 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Worker.php(1345): Workerman\Worker::forkWorkersForLinux()
+#13 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Worker.php(546): Workerman\Worker::forkWorkers()
+#14 /www/wwwroot/kefudia15.com/xiaotian/start.php(37): Workerman\Worker::runAll()
+#15 {main}Exception: client_id o1iiy0xdxuo is invalid in /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/gateway-worker/src/Lib/Context.php:131
+Stack trace:
+#0 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/gateway-worker/src/Lib/Gateway.php(1111): GatewayWorker\Lib\Context::clientIdToAddress('o1iiy0xdxuo')
+#1 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/gateway-worker/src/Lib/Gateway.php(882): GatewayWorker\Lib\Gateway::sendCmdAndMessageToClient('o1iiy0xdxuo', 12, '', '7f0000010b5b000...')
+#2 /www/wwwroot/kefudia15.com/xiaotian/application/service/SocketEvents.php(622): GatewayWorker\Lib\Gateway::bindUid('o1iiy0xdxuo', '7f0000010b5b000...')
+#3 /www/wwwroot/kefudia15.com/xiaotian/application/service/Events.php(70): app\service\SocketEvents::chatMessage('7f0000010b5b000...', Array, Object(Workerman\MySQL\Connection))
+#4 [internal function]: app\service\Events::onMessage('7f0000010b5b000...', '{"cmd":"chatMes...')
+#5 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/gateway-worker/src/BusinessWorker.php(404): call_user_func('app\\service\\Eve...', '7f0000010b5b000...', '{"cmd":"chatMes...')
+#6 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Connection/TcpConnection.php(660): GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#7 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Events/Select.php(292): Workerman\Connection\TcpConnection->baseRead(Resource id #68)
+#8 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Worker.php(2408): Workerman\Events\Select->loop()
+#9 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#10 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Worker.php(1541): GatewayWorker\BusinessWorker->run()
+#11 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Worker.php(1371): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#12 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Worker.php(1345): Workerman\Worker::forkWorkersForLinux()
+#13 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Worker.php(546): Workerman\Worker::forkWorkers()
+#14 /www/wwwroot/kefudia15.com/xiaotian/start.php(37): Workerman\Worker::runAll()
+#15 {main}Exception: client_id o1iiy0xdxuo is invalid in /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/gateway-worker/src/Lib/Context.php:131
+Stack trace:
+#0 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/gateway-worker/src/Lib/Gateway.php(1111): GatewayWorker\Lib\Context::clientIdToAddress('o1iiy0xdxuo')
+#1 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/gateway-worker/src/Lib/Gateway.php(882): GatewayWorker\Lib\Gateway::sendCmdAndMessageToClient('o1iiy0xdxuo', 12, '', '7f0000010b59000...')
+#2 /www/wwwroot/kefudia15.com/xiaotian/application/service/SocketEvents.php(622): GatewayWorker\Lib\Gateway::bindUid('o1iiy0xdxuo', '7f0000010b59000...')
+#3 /www/wwwroot/kefudia15.com/xiaotian/application/service/Events.php(70): app\service\SocketEvents::chatMessage('7f0000010b59000...', Array, Object(Workerman\MySQL\Connection))
+#4 [internal function]: app\service\Events::onMessage('7f0000010b59000...', '{"cmd":"chatMes...')
+#5 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/gateway-worker/src/BusinessWorker.php(404): call_user_func('app\\service\\Eve...', '7f0000010b59000...', '{"cmd":"chatMes...')
+#6 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Connection/TcpConnection.php(660): GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#7 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Events/Select.php(292): Workerman\Connection\TcpConnection->baseRead(Resource id #42)
+#8 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Worker.php(2408): Workerman\Events\Select->loop()
+#9 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#10 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Worker.php(1541): GatewayWorker\BusinessWorker->run()
+#11 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Worker.php(1371): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#12 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Worker.php(1345): Workerman\Worker::forkWorkersForLinux()
+#13 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Worker.php(546): Workerman\Worker::forkWorkers()
+#14 /www/wwwroot/kefudia15.com/xiaotian/start.php(37): Workerman\Worker::runAll()
+#15 {main}Exception: client_id o1iiy0xdxuo is invalid in /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/gateway-worker/src/Lib/Context.php:131
+Stack trace:
+#0 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/gateway-worker/src/Lib/Gateway.php(1111): GatewayWorker\Lib\Context::clientIdToAddress('o1iiy0xdxuo')
+#1 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/gateway-worker/src/Lib/Gateway.php(882): GatewayWorker\Lib\Gateway::sendCmdAndMessageToClient('o1iiy0xdxuo', 12, '', '7f0000010b59000...')
+#2 /www/wwwroot/kefudia15.com/xiaotian/application/service/SocketEvents.php(622): GatewayWorker\Lib\Gateway::bindUid('o1iiy0xdxuo', '7f0000010b59000...')
+#3 /www/wwwroot/kefudia15.com/xiaotian/application/service/Events.php(70): app\service\SocketEvents::chatMessage('7f0000010b59000...', Array, Object(Workerman\MySQL\Connection))
+#4 [internal function]: app\service\Events::onMessage('7f0000010b59000...', '{"cmd":"chatMes...')
+#5 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/gateway-worker/src/BusinessWorker.php(404): call_user_func('app\\service\\Eve...', '7f0000010b59000...', '{"cmd":"chatMes...')
+#6 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Connection/TcpConnection.php(660): GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#7 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Events/Select.php(292): Workerman\Connection\TcpConnection->baseRead(Resource id #42)
+#8 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Worker.php(2408): Workerman\Events\Select->loop()
+#9 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#10 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Worker.php(1541): GatewayWorker\BusinessWorker->run()
+#11 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Worker.php(1371): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#12 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Worker.php(1345): Workerman\Worker::forkWorkersForLinux()
+#13 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Worker.php(546): Workerman\Worker::forkWorkers()
+#14 /www/wwwroot/kefudia15.com/xiaotian/start.php(37): Workerman\Worker::runAll()
+#15 {main}Exception: client_id o1iiy0xdxuo is invalid in /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/gateway-worker/src/Lib/Context.php:131
+Stack trace:
+#0 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/gateway-worker/src/Lib/Gateway.php(1111): GatewayWorker\Lib\Context::clientIdToAddress('o1iiy0xdxuo')
+#1 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/gateway-worker/src/Lib/Gateway.php(882): GatewayWorker\Lib\Gateway::sendCmdAndMessageToClient('o1iiy0xdxuo', 12, '', '7f0000010b59000...')
+#2 /www/wwwroot/kefudia15.com/xiaotian/application/service/SocketEvents.php(622): GatewayWorker\Lib\Gateway::bindUid('o1iiy0xdxuo', '7f0000010b59000...')
+#3 /www/wwwroot/kefudia15.com/xiaotian/application/service/Events.php(70): app\service\SocketEvents::chatMessage('7f0000010b59000...', Array, Object(Workerman\MySQL\Connection))
+#4 [internal function]: app\service\Events::onMessage('7f0000010b59000...', '{"cmd":"chatMes...')
+#5 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/gateway-worker/src/BusinessWorker.php(404): call_user_func('app\\service\\Eve...', '7f0000010b59000...', '{"cmd":"chatMes...')
+#6 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Connection/TcpConnection.php(660): GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#7 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Events/Select.php(292): Workerman\Connection\TcpConnection->baseRead(Resource id #42)
+#8 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Worker.php(2408): Workerman\Events\Select->loop()
+#9 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#10 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Worker.php(1541): GatewayWorker\BusinessWorker->run()
+#11 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Worker.php(1371): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#12 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Worker.php(1345): Workerman\Worker::forkWorkersForLinux()
+#13 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Worker.php(546): Workerman\Worker::forkWorkers()
+#14 /www/wwwroot/kefudia15.com/xiaotian/start.php(37): Workerman\Worker::runAll()
+#15 {main}Exception: client_id KF_5c6ce9f6d753b is invalid in /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/gateway-worker/src/Lib/Context.php:131
+Stack trace:
+#0 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/gateway-worker/src/Lib/Gateway.php(1111): GatewayWorker\Lib\Context::clientIdToAddress('KF_5c6ce9f6d753...')
+#1 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/gateway-worker/src/Lib/Gateway.php(882): GatewayWorker\Lib\Gateway::sendCmdAndMessageToClient('KF_5c6ce9f6d753...', 12, '', '7f0000010b5b000...')
+#2 /www/wwwroot/kefudia15.com/xiaotian/application/service/SocketEvents.php(622): GatewayWorker\Lib\Gateway::bindUid('KF_5c6ce9f6d753...', '7f0000010b5b000...')
+#3 /www/wwwroot/kefudia15.com/xiaotian/application/service/Events.php(70): app\service\SocketEvents::chatMessage('7f0000010b5b000...', Array, Object(Workerman\MySQL\Connection))
+#4 [internal function]: app\service\Events::onMessage('7f0000010b5b000...', '{"cmd":"chatMes...')
+#5 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/gateway-worker/src/BusinessWorker.php(404): call_user_func('app\\service\\Eve...', '7f0000010b5b000...', '{"cmd":"chatMes...')
+#6 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Connection/TcpConnection.php(660): GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#7 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Events/Select.php(292): Workerman\Connection\TcpConnection->baseRead(Resource id #61)
+#8 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Worker.php(2408): Workerman\Events\Select->loop()
+#9 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#10 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Worker.php(1541): GatewayWorker\BusinessWorker->run()
+#11 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Worker.php(1371): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#12 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Worker.php(1345): Workerman\Worker::forkWorkersForLinux()
+#13 /www/wwwroot/kefudia15.com/xiaotian/vendor/workerman/workerman/Worker.php(546): Workerman\Worker::forkWorkers()
+#14 /www/wwwroot/kefudia15.com/xiaotian/start.php(37): Workerman\Worker::runAll()
+#15 {main}Workerman[start.php] stopping ...
+Workerman[start.php] has been stopped
+Unknown command: start7
+Usage: php yourfile <command> [mode]
+Commands: 
+start		Start worker in DEBUG mode.
+		Use mode -d to start in DAEMON mode.
+stop		Stop worker.
+		Use mode -g to stop gracefully.
+restart		Restart workers.
+		Use mode -d to start in DAEMON mode.
+		Use mode -g to stop gracefully.
+reload		Reload codes.
+		Use mode -g to reload gracefully.
+status		Get worker status.
+		Use mode -d to show live status.
+connections	Get worker connections.
+Workerman[start.php] start in DEBUG mode
+--------------------------------------------- WORKERMAN ----------------------------------------------
+Workerman version:4.0.4          PHP version:7.2.33
+---------------------------------------------- WORKERS -----------------------------------------------
+proto   user            worker              listen                      processes    status           
+tcp     root            wsBusinessWorker    none                        8             [OK]            
+tcp     root            wsAppGateway        websocket://0.0.0.0:2020    8             [OK]            
+tcp     root            Register            text://0.0.0.0:1238         1             [OK]            
+------------------------------------------------------------------------------------------------------
+Press Ctrl+C to stop. Start success.
+Workerman[start.php] stopping ...
